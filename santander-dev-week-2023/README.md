@@ -2,16 +2,17 @@
 
 Java RESTful API criada para a Santander Dev Week
 
-### Diagrama de classes
+## Diagrama de classes
 
+```mermaid
 classDiagram
-class User {
-- name: String
-- account: Account
-- features: Features
-- card: Card
-- news: News
-}
+    class User {
+        - name: String
+        - account: Account
+        - features: Features
+        - card: Card
+        - news: News
+    }
 
     class Account {
         - number: String
@@ -35,7 +36,8 @@ class User {
         - description: String
     }
 
-    User "1" "-- "1" Account
-    User "1" "-- "N" Features
-    User "1" "-- "1" Card
-    User "1" "-- "N" News
+    User "1" *-- "1" Account
+    User "1" *-- "N" Features
+    User "1" *-- "1" Card
+    User "1" *-- "N" News
+```
